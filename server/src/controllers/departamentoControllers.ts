@@ -9,6 +9,17 @@ class departamentoControllers{
         res.json(depto[0]);
         
     }
+
+    public async create(req:Request, res: Response): Promise<void>{
+
+        await db.query('INSERT INTO tb_departamento set ?', [req.body]);
+        console.log(req.body);
+        res.json({message: 'registro guardado '});
+       
+
+    }
+
+
 }
 
 export const departamentoController = new departamentoControllers();

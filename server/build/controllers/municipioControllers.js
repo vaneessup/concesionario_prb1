@@ -27,6 +27,21 @@ class municipioControllers {
             res.status(404).json({ Text: "'No existe el registo'" });
         });
     }
+    create(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query('INSERT INTO tb_municipio set ?', [req.body]);
+            console.log(req.body);
+            res.json({ message: 'registro guardado ' });
+        });
+    }
+    //ver todos
+    lista(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const depto = yield database_1.default.query('SELECT * FROM tb_municipio');
+            console.log(depto);
+            res.json(depto[0]);
+        });
+    }
 }
 exports.munController = new municipioControllers();
 exports.default = exports.munController;

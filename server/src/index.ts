@@ -8,6 +8,8 @@ import carsRoutes from './routes/carsRoutes';
 import dptoRout from './routes/dptoRouts';
 import municipioRoutes from './routes/municipioRoutes';
 import clienteRoutes from './routes/clienteRoutes';
+import agenteRoutes from './routes/agenteRoutes';
+import concesionarioRoutes from './routes/concesionarioRoutes';
 
 
 // Clase para el servidor
@@ -40,6 +42,8 @@ class Server {
         this.app.use('/dpto', dptoRout);
         this.app.use('/municipio', municipioRoutes);
         this.app.use('/cliente', clienteRoutes);
+        this.app.use('/agente', agenteRoutes);
+        this.app.use('/concesionario', concesionarioRoutes);
     }
 
     // metodo para inicializar el servidor

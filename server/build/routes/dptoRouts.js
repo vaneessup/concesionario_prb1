@@ -12,6 +12,8 @@ class dptoRout {
     }
     config() {
         this.routerd.get('/listado', departamentoControllers_1.default.lista);
+        this.routerd.post('/nuevo', departamentoControllers_1.default.create);
+        this.routerd.post('/nuevo', departamentoControllers_1.default.create);
     }
 }
 const dpto = new dptoRout();

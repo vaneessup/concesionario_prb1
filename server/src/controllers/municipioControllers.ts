@@ -14,6 +14,23 @@ class municipioControllers{
         res.status(404).json({Text: "'No existe el registo'"});
         
     }
+
+    public async create(req:Request, res: Response): Promise<void>{
+
+        await db.query('INSERT INTO tb_municipio set ?', [req.body]);
+        console.log(req.body);
+        res.json({message: 'registro guardado '});
+       
+
+    }
+
+    //ver todos
+    public async lista (req:Request, res:Response){
+        const depto = await db.query('SELECT * FROM tb_municipio');
+        console.log(depto);
+        res.json(depto[0]);
+        
+    }
 }
 
 export const munController = new municipioControllers();

@@ -11,7 +11,10 @@ class municipioRoutes {
         this.config();
     }
     config() {
-        this.routerd.get('/listado/:tb_Departamento_idDepartamento', municipioControllers_1.default.municipios); //para obtener todos los registros
+        this.routerd.get('/listado/:tb_Departamento_idDepartamento', municipioControllers_1.default.municipios);
+        this.routerd.post('/nuevo', municipioControllers_1.default.create);
+        this.routerd.get('/listado', municipioControllers_1.default.lista);
+        //para obtener todos los registros
     }
 }
 const municipio = new municipioRoutes();

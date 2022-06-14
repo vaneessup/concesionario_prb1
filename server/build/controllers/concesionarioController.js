@@ -12,23 +12,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.departamentoController = void 0;
+exports.ConcesionariosController = void 0;
 const database_1 = __importDefault(require("../database"));
-class departamentoControllers {
+class concesionariosController {
     lista(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const depto = yield database_1.default.query('SELECT * FROM tb_departamento');
-            console.log(depto);
-            res.json(depto[0]);
+            const concesionarios = yield database_1.default.query('SELECT * FROM tb_concesionario');
+            console.log(concesionarios);
+            res.json(concesionarios[0]);
         });
     }
-    create(req, res) {
+    //CONSULTA PARA GUARDAR DATO
+    createC(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('INSERT INTO tb_departamento set ?', [req.body]);
+            yield database_1.default.query('INSERT INTO tb_concesionario set ?', [req.body]);
             console.log(req.body);
             res.json({ message: 'registro guardado ' });
         });
     }
 }
-exports.departamentoController = new departamentoControllers();
-exports.default = exports.departamentoController;
+exports.ConcesionariosController = new concesionariosController();
+exports.default = exports.ConcesionariosController;

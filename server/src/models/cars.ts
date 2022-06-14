@@ -5,6 +5,6 @@ export interface CarsL { // definir campos
     Modelo: string;
     Tipo: string;
     Icono: string;
-    created_at?: Date;
+    tb_Concesionario_idConcesionario: number
 
 }
