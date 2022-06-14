@@ -1,9 +1,9 @@
-export interface CarsL { // definir campos
-    idVehiculo?: number;
-    Marca: string;
-    Modelo: string;
-    Tipo: string;
-    Icono: string;
-    created_at?: Date;
+export interface clientes { // definir campos
+    idCliente?: number;
+    Nombre: string;
+    Apellido: string;
+    Edad: number;
+    Correo: string;
+    Telefono: number;
 
 }

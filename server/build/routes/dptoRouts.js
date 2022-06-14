@@ -11,7 +11,7 @@ class dptoRout {
         this.config();
     }
     config() {
-        this.routerd.get('/listado', departamentoControllers_1.default.lista); //para obtener todos los registros
+        this.routerd.get('/listado', departamentoControllers_1.default.lista);
     }
 }
 const dpto = new dptoRout();

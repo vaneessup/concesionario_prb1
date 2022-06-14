@@ -15,8 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.clientController = void 0;
 const database_1 = __importDefault(require("../database"));
 class clientesController {
+    clientesC(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const clien = yield database_1.default.query('SELECT * FROM tb_clientes');
+            console.log(clien);
+            res.json(clien[0]);
+        });
+    }
     //CONSULTA PARA GUARDAR DATO
-    create(req, res) {
+    createC(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield database_1.default.query('INSERT INTO tb_clientes set ?', [req.body]);
             console.log(req.body);

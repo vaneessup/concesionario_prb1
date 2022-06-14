@@ -9,7 +9,7 @@ class dptoRout{
             this.config();
    }
    config(): void{
-        this.routerd.get('/listado',departamentoController.lista);//para obtener todos los registros
+        this.routerd.get('/listado',departamentoController.lista);
    }
 }
 

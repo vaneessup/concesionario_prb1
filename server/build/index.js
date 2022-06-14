@@ -11,6 +11,7 @@ const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const carsRoutes_1 = __importDefault(require("./routes/carsRoutes"));
 const dptoRouts_1 = __importDefault(require("./routes/dptoRouts"));
 const municipioRoutes_1 = __importDefault(require("./routes/municipioRoutes"));
+const clienteRoutes_1 = __importDefault(require("./routes/clienteRoutes"));
 // Clase para el servidor
 class Server {
     // propiedad para guardar el objeto que devuelve express
@@ -33,6 +34,7 @@ class Server {
         this.app.use('/cars', carsRoutes_1.default);
         this.app.use('/dpto', dptoRouts_1.default);
         this.app.use('/municipio', municipioRoutes_1.default);
+        this.app.use('/cliente', clienteRoutes_1.default);
     }
     // metodo para inicializar el servidor
     start() {

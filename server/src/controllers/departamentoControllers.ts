@@ -9,13 +9,6 @@ class departamentoControllers{
         res.json(depto[0]);
         
     }
-
-    public async municipios (req:Request, res:Response){
-        const municipio = await db.query('SELECT * FROM tb_municipio');
-        console.log(municipio);
-        res.json(municipio[0]);
-        
-    }
 }
 
 export const departamentoController = new departamentoControllers();

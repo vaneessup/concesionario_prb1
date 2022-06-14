@@ -5,9 +5,9 @@ import cors from 'cors';
 
 import indexRoutes from './routes/indexRoutes';
 import carsRoutes from './routes/carsRoutes';
-import cotizacionRoutes from './routes/cotizacionRoutes';
 import dptoRout from './routes/dptoRouts';
 import municipioRoutes from './routes/municipioRoutes';
+import clienteRoutes from './routes/clienteRoutes';
 
 
 // Clase para el servidor
@@ -36,9 +36,10 @@ class Server {
 
     routes(): void {
         this.app.use(indexRoutes);
-        this.app.use('/cars', carsRoutes);
+        this.app.use('/cars', carsRoutes,);
         this.app.use('/dpto', dptoRout);
         this.app.use('/municipio', municipioRoutes);
+        this.app.use('/cliente', clienteRoutes);
     }
 
     // metodo para inicializar el servidor
