@@ -2,8 +2,6 @@
 import {Router} from 'express';
 import CarsController from '../controllers/carsController';
 
-
-
 class cars{
 
    public router: Router = Router();
@@ -13,10 +11,10 @@ class cars{
    }
    config(): void{
         this.router.get('/listado',CarsController.list);//para obtener todos los registros
-        this.router.get('/listado/:id', CarsController.getOne);//para obtener un solo registro
+        this.router.get('/listado/:idVehiculo', CarsController.getOne);//para obtener un solo registro
         this.router.post('/', CarsController.create);
-        this.router.delete('/listado/:id', CarsController.delete);
-        this.router.put('/listado/:id', CarsController.update);
+        this.router.delete('/listado/:idVehiculo', CarsController.delete);
+        this.router.put('/listado/:idVehiculo', CarsController.update);
    }
 }
 

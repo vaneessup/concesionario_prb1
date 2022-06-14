@@ -9,7 +9,8 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const carsRoutes_1 = __importDefault(require("./routes/carsRoutes"));
-const cotizacionRoutes_1 = __importDefault(require("./routes/cotizacionRoutes"));
+const dptoRouts_1 = __importDefault(require("./routes/dptoRouts"));
+const municipioRoutes_1 = __importDefault(require("./routes/municipioRoutes"));
 // Clase para el servidor
 class Server {
     // propiedad para guardar el objeto que devuelve express
@@ -29,7 +30,9 @@ class Server {
     }
     routes() {
         this.app.use(indexRoutes_1.default);
-        this.app.use('/cars', carsRoutes_1.default, cotizacionRoutes_1.default);
+        this.app.use('/cars', carsRoutes_1.default);
+        this.app.use('/dpto', dptoRouts_1.default);
+        this.app.use('/municipio', municipioRoutes_1.default);
     }
     // metodo para inicializar el servidor
     start() {

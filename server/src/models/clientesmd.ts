@@ -1,4 +1,3 @@
-// definir objetos
 export interface CarsL { // definir campos
     idVehiculo?: number;
     Marca: string;

@@ -22,32 +22,32 @@ class carsController {
             res.json(carros[0]);
         });
     }
+    //CONSULTA PARA GUARDAR DATO
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield database_1.default.query('INSERT INTO tb_vehiculo set ?', [req.body]);
             console.log(req.body);
             res.json({ message: 'registro guardado ' });
-            //CONSULTA PARA GUARDAR DATO
         });
     }
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { id } = req.params;
-            yield database_1.default.query('DELETE FROM tb_vehiculo WHERE id = ?', [id]);
-            res.json({ message: 'Eliminando un registro ' + req.params.id });
+            const { idVehiculo } = req.params;
+            yield database_1.default.query('DELETE FROM tb_vehiculo WHERE idVehiculo = ?', [idVehiculo]);
+            res.json({ message: 'Eliminando un registro ' + req.params.marca });
         });
     }
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { id } = req.params;
-            yield database_1.default.query('UPDATE tb_vehiculo set ? WHERE id = ?', [req.body, id]);
-            res.json({ Text: 'Registro actualizado ' + req.params.id });
+            const { idVehiculo } = req.params;
+            yield database_1.default.query('UPDATE tb_vehiculo set ? WHERE idVehiculo = ?', [req.body, idVehiculo]);
+            res.json({ Text: 'Registro actualizado ' + req.params.marca });
         });
     }
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { id } = req.params;
-            const cars = yield database_1.default.query('SELECT * FROM tb_vehiculo WHERE id = ?', [id]);
+            const { idVehiculo } = req.params;
+            const cars = yield database_1.default.query('SELECT * FROM tb_vehiculo WHERE idVehiculo = ?', [idVehiculo]);
             if (cars.length > 0) {
                 return res.json(cars[0]);
             }

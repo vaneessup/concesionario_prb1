@@ -13,10 +13,10 @@ class cars {
     }
     config() {
         this.router.get('/listado', carsController_1.default.list); //para obtener todos los registros
-        this.router.get('/listado/:id', carsController_1.default.getOne); //para obtener un solo registro
+        this.router.get('/listado/:idVehiculo', carsController_1.default.getOne); //para obtener un solo registro
         this.router.post('/', carsController_1.default.create);
-        this.router.delete('/listado/:id', carsController_1.default.delete);
-        this.router.put('/listado/:id', carsController_1.default.update);
+        this.router.delete('/listado/:idVehiculo', carsController_1.default.delete);
+        this.router.put('/listado/:idVehiculo', carsController_1.default.update);
     }
 }
 const Cars = new cars();
