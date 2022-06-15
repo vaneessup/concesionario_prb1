@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "f2bbdcde-b890-44ce-bbc7-ffef6531b410",
+		"name": "serviciosPrb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20972956"
+	},
+	"item": [
+		{
+			"name": "Listado de departamentos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/dpto/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dpto",
+						"listado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listado de municipios por departamento",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/municipio/listado/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"municipio",
+						"listado",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de vehiculos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cars/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"listado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cliente/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente",
+						"listado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar vehiculos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Marca\": \"HONDA\",\r\n    \"Modelo\": \"2014\",\r\n    \"Tipo\": \"CIVIC\",\r\n    \"Icono\": \"https://w7.pngwing.com/pngs/459/529/png-transparent-2016-honda-civic-2018-honda-civic-compact-car-honda.png\",\r\n    \"Precio\": \"40000\",\r\n    \"tb_Concesionario_idConcesionario\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar departamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deptoNombre\": \"Izabal\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/dpto/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dpto",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar municipio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"munNombre\": \"Jalpatagua\",\r\n    \"tb_Departamento_idDepartamento\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/municipio/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"municipio",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de Municipios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/municipio/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"municipio",
+						"listado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"Enrique\",\r\n    \"Apellido\": \"Gaytan\",\r\n    \"Edad\": \"24\",\r\n    \"Correo\": \"cgan@yahoo.com\",\r\n    \"Telefono\": \"45634567\",\r\n    \"Genero\": \"M\",\r\n    \"tb_departamento_idDepartamento\": \"1\",\r\n    \"tb_municipio_idMunicipio\": \"2\",\r\n    \"tb_vehiculo_idVehiculo\": \"1\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar concesionario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"Excel Auto Ventas\",\r\n    \"tb_Direcciones_idDireccion\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/concesionario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"concesionario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver un vehiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cars/listado/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"listado",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

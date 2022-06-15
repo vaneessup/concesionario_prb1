@@ -1,4 +1,4 @@
-export interface agente { // definir campos
+export interface agentemd{ // definir campos
     idCliente?: number;
     Nombre: string;
     Apellido: string;

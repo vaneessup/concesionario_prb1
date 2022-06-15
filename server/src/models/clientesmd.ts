@@ -5,5 +5,8 @@ export interface clientes { // definir campos
     Edad: number;
     Correo: string;
     Telefono: number;
+    Genero: string;
+    tb_Departamento_idDepartamento: number;
+    tb_Municipio_idMunicipio: number;
 
 }
