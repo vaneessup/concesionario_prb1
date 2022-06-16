@@ -11,7 +11,7 @@ class dptoRout{
    config(): void{
         this.routerd.get('/listado',departamentoController.lista);
         this.routerd.post('/nuevo',departamentoController.create);
-        this.routerd.post('/nuevo',departamentoController.create);
+       // this.routerd.post('/nuevo',departamentoController.create);
    }
 }
 

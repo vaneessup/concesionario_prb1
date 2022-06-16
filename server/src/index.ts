@@ -1,5 +1,5 @@
 // Crear servidor
-import express, {Application} from 'express';
+import express, {application, Application} from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -26,6 +26,9 @@ class Server {
         this.routes();
 
     }
+    
+    //directorio publico
+    //app.use(express.static('public'));
 
     // metodo encargado de configuracion
     config(): void {
@@ -58,3 +61,4 @@ class Server {
 const server = new Server();
 server.start();
 // new Server();
+
